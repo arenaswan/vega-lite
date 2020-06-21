@@ -5898,6 +5898,9 @@
       },
       "type": "object"
     },
+    "Dict<any>": {
+      "type": "object"
+    },
     "Dict<unknown>": {
       "additionalProperties": {
       },
@@ -10174,9 +10177,7 @@
         },
         {
           "items": {
-            "additionalProperties": {
-            },
-            "type": "object"
+            "$ref": "#/definitions/Dict<any>"
           },
           "type": "array"
         },
@@ -10184,9 +10185,7 @@
           "type": "string"
         },
         {
-          "additionalProperties": {
-          },
-          "type": "object"
+          "$ref": "#/definitions/Dict<any>"
         }
       ]
     },
@@ -17252,9 +17251,7 @@
               "type": "boolean"
             },
             {
-              "additionalProperties": {
-              },
-              "type": "object"
+              "$ref": "#/definitions/Dict<any>"
             }
           ],
           "description": "Generate sphere GeoJSON data for the full globe."
