@@ -10174,6 +10174,8 @@
         },
         {
           "items": {
+            "additionalProperties": {
+            },
             "type": "object"
           },
           "type": "array"
@@ -10182,6 +10184,8 @@
           "type": "string"
         },
         {
+          "additionalProperties": {
+          },
           "type": "object"
         }
       ]
@@ -17248,7 +17252,8 @@
               "type": "boolean"
             },
             {
-              "additionalProperties": false,
+              "additionalProperties": {
+              },
               "type": "object"
             }
           ],

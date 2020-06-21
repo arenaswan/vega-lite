@@ -4,7 +4,7 @@ import {DatumDef, FieldDef, getFieldOrDatumDef, isFieldDef, MarkPropDatumDef, Ma
 import {Legend, LEGEND_SCALE_CHANNELS} from '../../legend';
 import {normalizeTimeUnit} from '../../timeunit';
 import {GEOJSON} from '../../type';
-import {deleteNestedProperty, isEmpty, keys, varName} from '../../util';
+import {deleteNestedProperty, Dict, isEmpty, keys, varName} from '../../util';
 import {mergeTitleComponent} from '../common';
 import {guideEncodeEntry} from '../guide';
 import {isUnitModel, Model} from '../model';
@@ -61,7 +61,7 @@ function getLegendDefWithScale(model: UnitModel, channel: NonPositionScaleChanne
   return {[channel]: scale};
 }
 
-function isExplicit<T extends string | number | object | boolean>(
+function isExplicit<T extends string | number | Dict<any> | boolean>(
   value: T,
   property: keyof LegendComponentProps,
   legend: Legend,

@@ -2,7 +2,7 @@ import {AxisEncode as VgAxisEncode, AxisOrient} from 'vega';
 import {Axis, AXIS_PARTS, isAxisProperty, isConditionalAxisValue} from '../../axis';
 import {PositionScaleChannel, POSITION_SCALE_CHANNELS} from '../../channel';
 import {getFieldOrDatumDef, PositionDatumDef, PositionFieldDef} from '../../channeldef';
-import {getFirstDefined, isEmpty, keys, normalizeAngle} from '../../util';
+import {Dict, getFirstDefined, isEmpty, keys, normalizeAngle} from '../../util';
 import {isSignalRef} from '../../vega.schema';
 import {mergeTitleComponent} from '../common';
 import {guideEncodeEntry} from '../guide';
@@ -167,7 +167,7 @@ function mergeAxisComponent(merged: AxisComponent, child: AxisComponent): AxisCo
   return merged;
 }
 
-function isExplicit<T extends string | number | boolean | object>(
+function isExplicit<T extends string | number | boolean | Dict<any>>(
   value: T,
   property: keyof AxisComponentProps,
   axis: Axis,

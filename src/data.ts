@@ -3,6 +3,7 @@
  */
 import {Vector2} from 'vega';
 import {FieldName} from './channeldef';
+import {Dict} from './util';
 import {VgData} from './vega.schema';
 
 export type ParseValue = null | string | 'string' | 'boolean' | 'date' | 'number';
@@ -83,7 +84,7 @@ export type DataSource = UrlData | InlineData | NamedData;
 
 export type Data = DataSource | Generator;
 
-export type InlineDataset = number[] | string[] | boolean[] | object[] | string | object;
+export type InlineDataset = number[] | string[] | boolean[] | Dict<any>[] | string | Dict<any>;
 
 export interface DataBase {
   /**
@@ -196,7 +197,7 @@ export interface SphereGenerator extends GeneratorBase {
   /**
    * Generate sphere GeoJSON data for the full globe.
    */
-  sphere: true | {};
+  sphere: true | Dict<any>;
 }
 
 export interface GraticuleGenerator extends GeneratorBase {
