@@ -1,3 +1,5 @@
+/* eslint-disable jest/expect-expect */
+
 import Ajv from 'ajv';
 import draft6Schema from 'ajv/lib/refs/json-schema-draft-06.json';
 import fs from 'fs';
