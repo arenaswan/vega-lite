@@ -209,7 +209,7 @@ export function fieldIntersection(a: ReadonlySet<string>, b: ReadonlySet<string>
   return hasIntersection(prefixGenerator(a), prefixGenerator(b));
 }
 
-// eslint-disable-next-line
+// eslint-disable-next-line @typescript-eslint/ban-types
 export function isEmpty(obj: object) {
   return keys(obj).length === 0;
 }

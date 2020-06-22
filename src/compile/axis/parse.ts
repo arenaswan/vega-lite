@@ -167,7 +167,7 @@ function mergeAxisComponent(merged: AxisComponent, child: AxisComponent): AxisCo
   return merged;
 }
 
-function isExplicit<T extends string | number | boolean | Dict<any>>(
+function isExplicit<T extends string | number | boolean | Dict<unknown>>(
   value: T,
   property: keyof AxisComponentProps,
   axis: Axis,

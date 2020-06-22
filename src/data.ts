@@ -84,7 +84,8 @@ export type DataSource = UrlData | InlineData | NamedData;
 
 export type Data = DataSource | Generator;
 
-export type InlineDataset = number[] | string[] | boolean[] | Dict<any>[] | string | Dict<any>;
+// eslint-disable-next-line @typescript-eslint/ban-types
+export type InlineDataset = number[] | string[] | boolean[] | Dict<any>[] | string | object;
 
 export interface DataBase {
   /**
